@@ -3,15 +3,15 @@ import {FETCH_ACTIONS,FETCH_ACTIONS_SUCCESS,FETCH_ACTIONS_FAILURE,ADD_ACTION,DEL
 import axios from 'axios'
 
 function fetchActionsFromApi(){
-    return axios.get('/api/todos');           
+    return axios.get('http://localhost:4002/api/todos');
 }
 
 function addActionToDatabase(text){
-    return axios.post('/api/todos',{'action':text})
+    return axios.post('http://localhost:4002/api/todos',{'action':text})
 }
 
 function deleteActionFromDatabase(id){
-    return axios.delete(`/api/todos/${id}`)
+    return axios.delete(`http://localhost:4002/api/todos/${id}`)
 }
 
 function* fetchActions(){
